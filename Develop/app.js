@@ -18,90 +18,90 @@ const render = require("./lib/htmlRenderer");
 const employees = () => {
   prompt({
     type: 'list',
-    name: 'title',
-    message: 'Please select your role'
+    name: 'role',
+    message: 'Please select your role',
     choices: ['Employee', 'Engineer', 'Intern', 'Manager']
   })
 
   // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-    .then(({ title }) => {
+    .then(({ role }) => {
 
-      if title === 'Employee' {
+      if (role === 'Employee') {
         prompt({
           type: 'input',
           name: 'name',
           message: 'What is your name?'
-        } {
+        }) ({
           type: 'input',
           name: 'id',
           message: 'What is your employee ID?'
-        } {
+        }) ({
           type: 'input',
           name: 'email',
           message: 'What is your email?'
-        }
         })
-      if title === 'Engineer' {
+        }
+      if (role === 'Engineer') {
         prompt({
           type: 'input',
           name: 'name',
           message: 'What is your name?'
-        } {
+        }) ({
           type: 'input',
           name: 'id',
           message: 'What is your employee ID?'
-        } {
+        }) ({
           type: 'input',
           name: 'email',
           message: 'What is your email?'
-        } {
+        }) ({
           type:  'input',
           name: 'github',
           message: 'What is your github user name?'
-        }
         })
-      if title === 'Intern' {
+        }
+      if (role === 'Intern') {
         prompt({
           type: 'input',
           name: 'name',
           message: 'What is your name?'
-        } {
+        }) ({
           type: 'input',
           name: 'id',
           message: 'What is your employee ID?'
-        } {
+        }) ({
           type: 'input',
           name: 'email',
           message: 'What is your email?'
-        } {
+        }) ({
           type: 'input',
           name: 'school',
           message: 'What school did you attend?'
-        }
         })
-      if title === 'Manager' {
+        }
+      if (role === 'Manager') {
         prompt({
           type: 'input',
           name: 'name',
           message: 'What is your name?'
-        } {
+        }) ({
           type: 'input',
           name: 'id',
           message: 'What is your employee ID?'
-        } {
+        }) ({
           type: 'input',
           name: 'email',
           message: 'What is your email?'
-        } {
+        }) ({
           type: 'input',
           name: 'officeNumber',
           message: 'What is your office number?'
-        }
         })
-  }
-})
+        }
+  })
+}
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
