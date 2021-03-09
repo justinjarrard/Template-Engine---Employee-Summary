@@ -22,86 +22,110 @@ const employees = () => {
     message: 'Please select your role',
     choices: ['Employee', 'Engineer', 'Intern', 'Manager']
   })
+    .then(({ role }) => {
+
+      if (role === 'Employee') {
+        prompt([{
+          type: 'input',
+          name: 'name',
+          message: 'What is your name?'
+        }, {
+          type: 'input',
+          name: 'id',
+          message: 'What is your employee ID?'
+        }, {
+          type: 'input',
+          name: 'email',
+          message: 'What is your email?'
+        }
+        ])
+      .then ((res) => {
+        console.log(res)
+      })} 
+      if (role === 'Engineer') {
+        prompt([{
+          type: 'input',
+          name: 'name',
+          message: 'What is your name?'
+        }, {
+          type: 'input',
+          name: 'id',
+          message: 'What is your employee ID?'
+        }, {
+          type: 'input',
+          name: 'email',
+          message: 'What is your email?'
+        }, {
+          type:  'input',
+          name: 'github',
+          message: 'What is your github user name?'
+        }
+        ])
+          .then((res) => {
+            console.log(res)
+          })
+      }
+      if (role === 'Intern') {
+        prompt([{
+          type: 'input',
+          name: 'name',
+          message: 'What is your name?'
+        }, {
+          type: 'input',
+          name: 'id',
+          message: 'What is your employee ID?'
+        }, {
+          type: 'input',
+          name: 'email',
+          message: 'What is your email?'
+        }, {
+          type: 'input',
+          name: 'school',
+          message: 'What school did you attend?'
+        }
+        ])
+          .then((res) => {
+            console.log(res)
+          })
+      }
+      if (role === 'Manager') {
+        prompt([{
+          type: 'input',
+          name: 'name',
+          message: 'What is your name?'
+        }, {
+          type: 'input',
+          name: 'id',
+          message: 'What is your employee ID?'
+        }, {
+          type: 'input',
+          name: 'email',
+          message: 'What is your email?'
+        }, {
+          type: 'input',
+          name: 'officeNumber',
+          message: 'What is your office number?'
+        }
+        ])
+          .then((res) => {
+            console.log(res)
+          })
+      }
+  })
+  .catch(err => console.log(err))
+}
+
+
+employees()
+
+
+// fs.writeFile(outputPath, render(employees), err => {
+//   if (err) { console.log(err) }
+// })
 
   // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-    .then(({ role }) => {
-
-      if (role === 'Employee') {
-        prompt({
-          type: 'input',
-          name: 'name',
-          message: 'What is your name?'
-        }) ({
-          type: 'input',
-          name: 'id',
-          message: 'What is your employee ID?'
-        }) ({
-          type: 'input',
-          name: 'email',
-          message: 'What is your email?'
-        })
-        }
-      if (role === 'Engineer') {
-        prompt({
-          type: 'input',
-          name: 'name',
-          message: 'What is your name?'
-        }) ({
-          type: 'input',
-          name: 'id',
-          message: 'What is your employee ID?'
-        }) ({
-          type: 'input',
-          name: 'email',
-          message: 'What is your email?'
-        }) ({
-          type:  'input',
-          name: 'github',
-          message: 'What is your github user name?'
-        })
-        }
-      if (role === 'Intern') {
-        prompt({
-          type: 'input',
-          name: 'name',
-          message: 'What is your name?'
-        }) ({
-          type: 'input',
-          name: 'id',
-          message: 'What is your employee ID?'
-        }) ({
-          type: 'input',
-          name: 'email',
-          message: 'What is your email?'
-        }) ({
-          type: 'input',
-          name: 'school',
-          message: 'What school did you attend?'
-        })
-        }
-      if (role === 'Manager') {
-        prompt({
-          type: 'input',
-          name: 'name',
-          message: 'What is your name?'
-        }) ({
-          type: 'input',
-          name: 'id',
-          message: 'What is your employee ID?'
-        }) ({
-          type: 'input',
-          name: 'email',
-          message: 'What is your email?'
-        }) ({
-          type: 'input',
-          name: 'officeNumber',
-          message: 'What is your office number?'
-        })
-        }
-  })
-}
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
@@ -113,10 +137,6 @@ const employees = () => {
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
-fs.writeFile(outputPath, render(employees), err => {
-  if (err) { console.log(err) }
-})
-// render ()
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
