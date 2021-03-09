@@ -1,0 +1,23 @@
+{
+  "name": "Template-Engine--Employee-Summary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinjarrard/Template-Engine--Employee-Summary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justinjarrard/Template-Engine--Employee-Summary/issues"
+  },
+  "homepage": "https://github.com/justinjarrard/Template-Engine--Employee-Summary#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
